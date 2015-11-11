@@ -42,4 +42,3 @@ class Rvrmth_PostBanner
 new Rvrmth_PostBanner();
 
 ?>
-
