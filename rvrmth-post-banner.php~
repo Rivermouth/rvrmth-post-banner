@@ -1,0 +1,32 @@
+<?php
+/*
+Plugin Name: Rivermouth Post Banner
+Plugin URI:  http://URI_Of_Page_Describing_Plugin_and_Updates
+Description: Custom post type for banners
+Version:     0.1
+Author:      Rivermouth Ltd
+Author URI:  http://rivermouth.fi
+License:     GPL2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Domain Path: /languages
+Text Domain: rivermouth-post-banner
+*/
+
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'rvrmth-post-banner',
+    array(
+      'labels' => array(
+        'name' => __( 'Banners' ),
+        'singular_name' => __( 'Banner' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+
+?>
+
