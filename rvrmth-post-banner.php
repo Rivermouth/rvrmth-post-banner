@@ -14,15 +14,15 @@ Text Domain: rivermouth-post-banner
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-class Rvrmth_PostBanner 
+class Rvrmth_PostBanner
 {
-	
-	public function __construct() 
+
+	public function __construct()
 	{
 		add_action('init', array($this, 'create_post_type_banner'));
 	}
 
-	public function create_post_type_banner() 
+	public function create_post_type_banner()
 	{
 		register_post_type('banner', array(
 			'labels' => array(
@@ -33,10 +33,10 @@ class Rvrmth_PostBanner
 			'has_archive' => true,
 			'menu_icon' => 'dashicons-slides',
 			'menu_position' => 20,
-			'supports' => array('title', 'editor', 'thumbnail')
+			'supports' => array('title', 'editor', 'thumbnail', 'post-formats')
 		));
 	}
-	
+
 }
 
 new Rvrmth_PostBanner();
