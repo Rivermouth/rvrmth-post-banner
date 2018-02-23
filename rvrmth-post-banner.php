@@ -33,6 +33,7 @@ class Rvrmth_PostBanner
 			'has_archive' => true,
 			'menu_icon' => 'dashicons-slides',
 			'menu_position' => 20,
+			'show_in_rest' => true,
 			'supports' => array('title', 'editor', 'thumbnail', 'post-formats')
 		));
 	}
